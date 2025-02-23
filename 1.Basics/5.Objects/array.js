@@ -1,3 +1,5 @@
+// arrays are also objects in JS
+
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink'];
 
 // arrays are zero indexed in javascript 
