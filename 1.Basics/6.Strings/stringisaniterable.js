@@ -18,3 +18,7 @@ console.log("ho-ho-ho".split("-")); // ['ho', 'ho', 'ho'] (separator must be spe
 
 console.log(greet.toUpperCase()); // "HELLO, "
 console.log(greet.toLowerCase()); // "hello, "
+
+
+var str = "Hello";
+console.log(str.match("jello"));
