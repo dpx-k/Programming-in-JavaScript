@@ -1,0 +1,51 @@
+Transcript: 
+Today you can order almost anything directly to your home. But did you know that one of the functionalities that makes online shopping possible is HTML forms. Without them, you would not be able to enter your credit card details during checkout. But forms are not limited to e commerce. You can use forms practically every day on the internet. When you log into your favorite website, you do it using a form. In this video, I'll take you through the steps to create a form and introduce you to a few different input types. But first, let's briefly explore how forms work. To put it simply when a user enters data on a website an HTML form submits an HTTP request containing the data to the server. But how do you create a form in the first place? You define forms with the html form tags. Forms also have an optional form attribute called action. Actions specifies the URL or path that the form should submit the request to. When the action attribute is not specified, it submits the request to the same path as the current web page. There is also the FORM method, with the FORM method you can specify the HTTP method to use for the HTTP request. There are two HTTP methods to submit the form data, GET and POST. Remember the GET HTTP method retrieves information from the server. The POST HTTP method sends data to the server. When a user submits a form, one of these HTTP methods is used. We'll explore how this is done on a later course. Now let's explore how to add fields that the user can enter data into. First, let's add a simple text field. For example, a user name field. The fields in a form are specified by input tags. Note that the input tag does not need a closing tag. But if I want to, I could close the tag by adding a forward slash before the end of the input tag. When I use the text input type, it displays a text field on the web page. But a text box on its own isn't very user friendly, so I will now add a label above it. By adding the label tag, the form will now display the word user name above the input field. Next, let's add a password field. In this case I won't use the text input type since I don't want the password to be visible. HTML has an input type specific for passwords that will mask the user's input data. The user name will be visible and the password will be masked. Finally, I need to add a button so the user can submit the form. So I used the input type, submit. When the user clicks the submit button, the HTTP request containing the form content will be sent to the web server. In summary, you use the form tag at the start of a form where after you indicate the method that should be used. You can create labels for input types with the label tag, you use the text input type for a text input like a user name. For a password, you use the password input type. To add a submit button to a form, you use the submit input type. There are many different input types available. For example, you can add checkboxes to a form. To do this, you use the checkbooks input type. Each box can be checked or unchecked. You use the name and value attributes to configure how the data is sent to the server, you will explore this in more depth in a later course. Radio buttons on the other hand are like checkboxes except only one button can be checked in on the group. Checking one radio button will uncheck all the other radio buttons. There are also other types of inputs such as the number, email and file upload types. However, some input fields do not use the input tags. For instance the multi line text field. The text input type that I showed you earlier is only for single line text content.
+
+Play video starting at :3:52 and follow transcript3:52
+To allow users to enter multiple lines of text, I need to use the text area tag instead of text input type. Another type of input that does not use the input tag is a drop down list which contains items that the user can select. This time, you use the select tag and for the items on the list you use option tags. You now know how HTML forms work and the different input types, developers use. You covered form tags such as text, password, checkbox, radio, text area and select. I can't imagine my life without online shopping. Next time you order something online, notice all the types of input the form includes and how you, as a user interacts with it. You might notice that the user experience of some forms is better than others. I'm sure that you are now able to choose appropriate input types for the forms that you create.
+
+Summary: 
+
+### **Detailed Summary of the Text on HTML Forms**
+
+The text discusses **HTML forms**, their purpose, structure, and different input types used in web development. It begins by emphasizing how HTML forms play a crucial role in online shopping and everyday internet activities such as logging into websites. Without HTML forms, users would not be able to enter data, such as credit card details during checkout.
+
+#### **1. How Forms Work**
+An HTML form enables users to enter data and submit it to a web server through an **HTTP request**. The request contains the form data, which the server processes. Forms are defined using the `<form>` tag, and they can have an optional `action` attribute that specifies the URL where the data should be sent. If the `action` attribute is not provided, the form submits data to the current webpage’s URL.
+
+#### **2. Form Submission Methods (GET vs. POST)**
+HTML forms use HTTP methods to send data:
+- **GET method**: Retrieves data from the server. It appends form data to the URL, making it visible in the browser’s address bar.
+- **POST method**: Sends data to the server in the request body, making it more secure than GET.
+
+When a form is submitted, it uses either the GET or POST method.
+
+#### **3. Creating Input Fields in a Form**
+Forms allow users to enter different types of data through input fields. Each field is created using the `<input>` tag, which does not require a closing tag. Various input types are available:
+
+- **Text Field**: Used for general text input, such as a username. It is created using `<input type="text">`.  
+- **Label**: A `<label>` tag is used to make the form more user-friendly by associating text with input fields.  
+- **Password Field**: Created using `<input type="password">`, this input type masks user input for security reasons.  
+- **Submit Button**: `<input type="submit">` is used to submit the form, sending the data to the server.
+
+#### **4. Additional Input Types**
+Apart from basic text input, forms support other types of input fields:
+
+- **Checkboxes** (`<input type="checkbox">`): Allow users to select multiple options. Each checkbox has a `name` and `value` attribute to define how data is sent to the server.  
+- **Radio Buttons** (`<input type="radio">`): Similar to checkboxes, but only one option can be selected at a time within a group. Selecting one radio button deselects the others in the same group.  
+- **Other Input Types**:
+  - **Number**: `<input type="number">` allows numeric input.
+  - **Email**: `<input type="email">` ensures users enter a valid email format.
+  - **File Upload**: `<input type="file">` lets users upload files.
+
+#### **5. Non-Input Tag Elements in Forms**
+Some form elements do not use `<input>` tags:
+
+- **Multiline Text Field (`<textarea>`)**: Unlike the text input type, which allows only a single line of text, `<textarea>` is used for entering multiple lines.  
+- **Dropdown List (`<select>` and `<option>`)**: `<select>` creates a dropdown menu, and `<option>` defines the available choices.
+
+#### **6. Importance of User Experience in Forms**
+The text concludes by encouraging developers to observe how different forms function when shopping online. Some forms provide a better user experience than others, and choosing the appropriate input types improves usability.
+
+### **Summary in One Sentence**
+The text explains how **HTML forms** work, covering their structure, submission methods (**GET** and **POST**), different **input types** (text, password, checkboxes, radio buttons, number, email, file upload), **non-input elements** like `<textarea>` and `<select>`, and the importance of designing user-friendly forms for a better experience.

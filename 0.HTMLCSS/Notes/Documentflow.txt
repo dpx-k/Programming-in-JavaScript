@@ -1,0 +1,177 @@
+Transcript: 
+By now you've learned how CSS styles individual html elements, but how does the web browser nowhere to place the elements on the screen? The web browsers normal way of calculating the position of html elements on the screen is called document flow. By default, nearly all html elements are organized into one of two categories namely in block and in line elements.
+Play video starting at ::24 and follow transcript0:24
+A block level element will occupy the full horizontal width of its parent element and the vertical height of its content. Each block level element will have a new line before and after. Therefore, multiple block level elements will stack on top of each other like a stack of boxes. In line elements only occupy the width and height of their content. They don't appear on a new line, hence the name in line. Therefore, multiple in line elements can form a row of elements. When coding in html, you need to be able to recognize and use block elements. Some examples of block level elements include the tags, div form and heading. You also need to be familiar with common in line elements. These include the tags anchor, image, input label, bold, italics, emphasis and span.
+Play video starting at :1:14 and follow transcript1:14
+Let me demonstrate the difference between block and in line now by using an example of an html file containing div and span elements.
+Play video starting at :1:23 and follow transcript1:23
+Okay, so, I've opened visual studio code here, I will now demonstrate an example where you will learn about document flow. First, I want you to notice that I have a div element containing three sentences of Lauren ipsum. A div or divided element is used to divide content into sections. If you don't speak Latin, don't worry. Lauren Ipsum is placeholder text that has been used since the 1500s.
+Play video starting at :1:51 and follow transcript1:51
+Each sentence contains a span element that you may recall are in line elements.
+Play video starting at :1:56 and follow transcript1:56
+Notice that all text is displayed in an unbroken flow of content in the browser.
+Play video starting at :2:2 and follow transcript2:02
+In the code I have div and span elements. I am now going to change the middle sentence from a span to a div tag. Because the div tag is a block level element, notice that the sentence has been moved to a new line and the span element after it is also a new line. It's possible to change elements from block level to in line and vice versa. This can be done using the display CSS property.
+Play video starting at :2:28 and follow transcript2:28
+Let me add a CSS file called style dot CSS. In my html file, let me give the middle sentence div element an Id. I now add a rule in the CSS file to change the element to an in line element. To create the CSS rule, I type hash middle and open the curly brackets. On the next line, I type display colon space in line semi colon. And on the next line I close the curly brackets, notice that the div has now changed to an in line element. If I want to change it back, I can just remove the property.
+Play video starting at :3:5 and follow transcript3:05
+I have deleted the rule in the code to change the element to an in line element. Another way to achieve this outcome is to set the display property to block.
+Play video starting at :3:15 and follow transcript3:15
+I have now changed the value for display to block. In another video, I will demonstrate to you that there are other values you can set for the display property to change the layout behavior of an element. Congratulations, you have now learned about block and in line elements in html. It's important for developers to be comfortable working with each and to know the differences.
+Play video starting at :3:38 and follow transcript3:38
+It's important to remember that block elements begin on a new line and take up the full width of the page. And in line elements work within the flow of surrounding content rather than breaking onto their own line.
+
+summary: 
+
+### **Detailed Summary of Block and Inline Elements in HTML & CSS**  
+
+When styling web pages with CSS, it is important to understand how **web browsers determine the placement of elements** on the screen. By default, browsers follow a system known as **document flow**, which dictates how elements appear on the webpage.  
+
+### **1. Understanding Document Flow**  
+Document flow is the **default way** web browsers position HTML elements on the screen. HTML elements are broadly categorized into two types:  
+1. **Block-level elements**  
+2. **Inline elements**  
+
+### **2. Block vs. Inline Elements**  
+#### **Block-level Elements:**  
+- A block-level element **occupies the full width** of its parent container.  
+- It takes up **the entire horizontal space**, even if its content is smaller.  
+- Block elements appear on a **new line**, meaning they stack vertically.  
+- Common **block-level elements**:  
+  ```html
+  <div>, <form>, <p>, <h1> to <h6>, <section>, <article>
+  ```
+- Example of block elements in action:  
+  ```html
+  <div>This is a block element</div>
+  <p>This is another block element</p>
+  ```
+  - The `<div>` and `<p>` will appear on **separate lines**.
+
+#### **Inline Elements:**  
+- An inline element only takes up **as much width as its content requires**.  
+- It does **not start on a new line** but flows within the surrounding content.  
+- Common **inline elements**:  
+  ```html
+  <span>, <a>, <img>, <input>, <label>, <strong>, <em>
+  ```
+- Example of inline elements in action:  
+  ```html
+  <p>This is an <span>inline</span> element.</p>
+  ```
+  - The `<span>` will appear **inside** the paragraph, **not on a new line**.
+
+---
+
+### **3. Example: Demonstrating Block vs. Inline Elements**  
+
+#### **Step 1: Initial HTML Code**  
+The following HTML file contains a `<div>` (block element) and multiple `<span>` (inline elements).  
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block vs. Inline Example</title>
+</head>
+<body>
+
+    <div>
+        <span>Sentence 1.</span>
+        <span>Sentence 2.</span>
+        <span>Sentence 3.</span>
+    </div>
+
+</body>
+</html>
+```
+- Here, **all sentences will appear on the same line** because `<span>` is an **inline** element.
+
+---
+
+#### **Step 2: Changing an Inline Element to a Block Element**  
+Now, let's change the **middle `<span>` to a `<div>`** (which is block-level).  
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block vs. Inline Example</title>
+</head>
+<body>
+
+    <div>
+        <span>Sentence 1.</span>
+        <div>Sentence 2.</div>  <!-- Changed from <span> to <div> -->
+        <span>Sentence 3.</span>
+    </div>
+
+</body>
+</html>
+```
+- Now, **"Sentence 2."** moves to a **new line** because `<div>` is a block-level element.
+- **"Sentence 1."** and **"Sentence 3."** remain **inline**.
+
+---
+
+### **4. Using CSS to Change Display Properties**  
+
+We can use the `display` property in CSS to change an element’s behavior.  
+
+#### **Step 3: Converting Block to Inline Using CSS**  
+Instead of changing the HTML structure, we can **make the `<div>` behave like an inline element** using CSS.  
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div>
+        <span>Sentence 1.</span>
+        <div id="middle">Sentence 2.</div>  <!-- Assigning an ID -->
+        <span>Sentence 3.</span>
+    </div>
+
+</body>
+</html>
+```
+Now, we define the `display` property in `style.css`:  
+```css
+#middle {
+    display: inline;
+}
+```
+- The `<div>` with ID `"middle"` will **now behave like an inline element** and appear on the same line as the `<span>` elements.
+
+---
+
+#### **Step 4: Converting Inline to Block Using CSS**  
+If we want an **inline element to behave like a block-level element**, we can do this:  
+```css
+span {
+    display: block;
+}
+```
+- Now, **all `<span>` elements** will behave like **block-level elements**, meaning each will appear on a **new line**.
+
+---
+
+### **5. Key Takeaways**  
+1. **Block-level elements** take up the full width and appear on a new line.  
+2. **Inline elements** only take up as much space as needed and do **not** start on a new line.  
+3. **The `display` property in CSS** can **change an element’s default behavior**.  
+   - `display: inline;` → Makes a block-level element behave like an inline element.  
+   - `display: block;` → Makes an inline element behave like a block element.  
+4. Developers should **understand and work with both** block and inline elements to create structured and visually appealing webpages.
+
+---
+
+### **6. Conclusion**  
+You have now learned about **block vs. inline elements** in HTML and how to manipulate them using CSS. Understanding these concepts is **essential for creating responsive and well-structured web layouts**. In the next lessons, you will explore additional values of the **display property**, such as `flex`, `grid`, and `inline-block`, to create more advanced layouts.
